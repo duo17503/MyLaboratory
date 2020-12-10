@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>My Laboratory</title>
+	<script type="text/javascript">
+		alert("Hi, there! I'm Jimmy!")
+		var visitor=prompt("May I have your name please ?","Jimmy Chou");
+		if(visitor.toUpperCase()==="Shirney Huang".toUpperCase()){
+		alert("Prin...Prin...Prin...Principal !? Such an honour!");
+		}else if(visitor.toUpperCase()==="Arthur Lin".toUpperCase()||visitor.toUpperCase()==="Max Hsu".toUpperCase()){
+		alert("My mighty mentor ! Let me become your student plz!");
+		}else{
+		alert("Hi ! "+visitor+" !"+" Welcome to my laboratory !")
+		}
+		alert("Please enjoy it :)")
+	function send(){alert("等我從AppWorks School畢業後 我就會完成這個功能了!")}
+	function init(){
+		window.setTimeout(countdown, 7000);
+		}
+	function countdown(){
+		alert("最近看了那麼多人的履歷及作品一定身心俱疲了吧!?記得適時讓眼睛休息喔!");}
+	function toggleMenu(){
+		var AD=document.getElementById("AD");
+		if(AD.style.display=="none"){
+		AD.style.display="block";
+		}else{
+		AD.style.display="none";
+		}
+	}
+	</script>
+	<style type="text/css">
+	.title{font-weight:bold;font-size:42px;color:#323ee6}
+	.content{font-size:30px;font-family:微軟正黑體}
+	.list{font-size:26px;font-family:微軟正黑體}
+	#btn{position:relative;left:5px;border:1px solid #888888;
+	background-color:#ffffff;padding:2px
+	}
+	#btn:hover{
+	background-color:#ff0000;
+	color:#ffffff}
+	.show{position:absolute;right:147px;top:70px;color:#323ee6;
+		font-weight:bold;font-size:38px}
+	.box{position:absolute;right:142.5px;top:200px;
+		width:85px;height:350px;background-color:white}
+	</style>
+</head>
+<body style="margin:50px;background-color:#eeeeee;" onload="init();">
+	<div class="title">這是甚麼 ?</div>
+	<div style="margin-top:10px;margin-bottom:10px" class="content">和別的學員相較之下這絕對稱不上是作品,但對我來說是一段嘗試的足跡!</div>
+	<div class="title">我嘗試了些什麼?</div>
+	<ul>
+		<li class="list">用Alert問候,用Prompt與If對校長、導師及他人做出差別待遇回應,並克服大小寫問題。</li>
+		<li class="list">利用Class選擇器對文章內容進行專制式的管理。</li>
+		<li class="list">用Id選擇器與虛擬選擇器使我下面的"送出"按鍵不枯燥,並製做點擊後的回應。</li>
+		<li class="list">創造能夠收合展開的區域於畫面右方假裝那是Google Ads。</li>
+		<li class="list">自動排程於數秒後彈跳視窗關心使用者的健康。</li>
+		<li class="list">使用Git分享這個小實驗室。</li>
+	</ul>
+	
+	
+	<div class="show" onclick="toggleMenu();">收合</div>
+	<div id="AD" class="box"><div style="font-weight:bold;font-size:42px">我在假裝我是討人厭的廣告</div></div>
+	
+	
+	<div class="title">跟我說說話吧</div>
+	<div style="margin-top:10px;margin-bottom:10px" class="content">填寫訊息 <input type="text" /><button id="btn" onclick="send()" >送出</button>
+	</div>
+</body>
+</html>
